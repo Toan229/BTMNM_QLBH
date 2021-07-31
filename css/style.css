@@ -16,7 +16,7 @@ html, body{
 
 form{
     width: 420px;
-    height: 500px;
+    height: 520px;
     border: 2px solid #ccc;
     background: #fff;
     padding: 30px;
@@ -27,7 +27,7 @@ form{
 }
 
 .register{
-    height: 540px;
+    height: 600px;
 }
 
 h2{

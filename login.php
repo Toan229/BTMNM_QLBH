@@ -4,6 +4,7 @@ include "config.php";
 session_start();
 $username = null;
 $password = null;
+$err_text = null;
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
     $dpassword =  $_POST['password'];
@@ -22,7 +23,7 @@ if(isset($_POST['submit'])){
         exit();
     }
     else{
-        echo "<script>alert('Tài khoản hoặc mật khẩu không chính xác.')</script>";
+        $err_text = "Tài khoản hoặc mật khẩu không chính xác.";
     }
 }
 ?>
@@ -30,7 +31,7 @@ if(isset($_POST['submit'])){
 <html>
     <head>
         <title>Đăng nhập</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" 
         rel="stylesheet">
     </head>
@@ -41,7 +42,7 @@ if(isset($_POST['submit'])){
             <input type="text" name="username" <?php if($username != null) echo "value= $username" ?> required>
             <label>Password</label>
             <input type="password" name="password" <?php if($password != null) echo "value= $dpassword" ?> required>
-
+            <?php echo "<p style=\"color:red; font-size:14px;\">$err_text</>" ?>
             <button class="login" name="submit">Đăng nhập</button>
             <p>Chưa có tài khoản? <a href="register.php">Đăng kí</a></p>
         </form>
