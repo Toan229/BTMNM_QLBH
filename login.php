@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
         $_SESSION['username'] = $row['username'];
         $_SESSION['password'] = $row['password'];
         if( $row['type'] == 0)
-            header("Location: trangchu.php");
+            header("Location: index.php");
         else
             header("Location:category.php");
         exit();
