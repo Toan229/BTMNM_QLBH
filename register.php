@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
         $result = mysqli_query($conn, $sql);
         if(!$result)
         {
-            echo "<script>alert('Tài khoản đã tồn tại')</script>";
+            $err_text = "Tài khoản đã tồn tại";
         }else{
             echo "<script type='text/javascript'>alert('Tạo tài khoản thành công !');
                 window.location='login.php';
