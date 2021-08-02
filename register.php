@@ -31,7 +31,7 @@ if(isset($_POST['submit'])){
 <html>
     <head>
         <title>Đăng kí tài khoản</title>
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="./css/style.css"/>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" 
         rel="stylesheet">
     </head>

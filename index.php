@@ -10,7 +10,6 @@ if(!isset($_SESSION['username']))
 }else{
     $username = $_SESSION['username'];
     $password = $_SESSION['password'];
-    echo "customer page-username = $username";
 }
 
 ?>
